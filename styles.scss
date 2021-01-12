@@ -1,0 +1,97 @@
+@import './normalize.scss';
+@import './slide-core-min.scss';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,900&display=swap');
+.container{
+    &__main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:#DDFFDE;
+    }
+}
+
+
+@media only screen 
+    and (min-device-width: 375px) 
+    and (min-device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) { 
+    /* styles */
+}
+
+// ===== textos ======
+
+.tit{
+    font-size: 27px;
+    font-family: 'Fira Sans', sans-serif;;
+}
+
+
+.frame{
+    width: 375px;
+    height: 812px;
+    background: whitesmoke;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.browser{
+    width: 100%;
+    height: 80px;
+    background: #c4c4c4;
+    &__top{
+        @extend.browser;
+    }
+    &__bottom{
+        @extend .browser;
+    }
+}
+
+.col{
+    &__main{
+        width: 95%;
+        padding: 0 0 0 5%;
+        // height: calc(100% - 160px);
+        height: 100%;
+        background: #fff;
+    }
+}
+
+// carrusel banner
+.splide{
+    &__arrows{
+        display: none;
+    }
+    &__slide{
+        border:1px solid #000;
+        height: 150px;
+        margin: 0 10px 0 0;
+        transition: .3s;
+        &.is-active{
+         .circle{
+             background: blue;
+         }   
+        }
+    }
+    &__pagination{
+        padding: 0;
+        display: none;
+    }
+}
+
+.circle{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: red;
+    // transition: .3s;
+}
+.square{
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+    background: burlywood;
+}
